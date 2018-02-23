@@ -1,0 +1,17 @@
+a = 123
+b = "1234\n34523"
+c = StructType{
+    Field1: "name",
+    Field2: 1234,
+}
+d = `а это уже
+многострочная
+строка
+`
+arr = []numbers{1, 2, 3, 4.56}
+
+sum = func(x,y)(res){
+    return x+y
+}
+
+log(a, "\n", b, "\n", c, '\n', d, arr, sum(c.Field2, arr[0]))
