@@ -19,11 +19,16 @@ func TestRunAST(t *testing.T) {
 		t.Error(err)
 		return
 	}
-	if err := RunAST(astf, &struct {
-		a int
-	}{}); err != nil {
+	st := struct {
+		A   int
+		B   string
+		D   string
+		Flt float64 `goscript:"f"`
+	}{}
+	if err := RunAST(astf, &st); err != nil {
 		t.Error(err)
 		return
 	}
+	t.Logf("Parsed struct %#v", st)
 
 }
